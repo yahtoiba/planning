@@ -12,7 +12,7 @@
 
 ``pkg install imagemagick -y``
 
-``git clone https://github.com/yahtoiba/Vruttly``
+```git clone https://github.com/yahtoiba/Vruttly```
 
 ``cd wabot-aq``
 
@@ -24,7 +24,7 @@
 ---------
 
 ### Or this
-``git clone https://github.com/yahtoiba/Vruttly``
+```git clone https://github.com/yahtoiba/Vruttly```
 
 ``cd Vruttly``
 
