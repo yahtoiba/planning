@@ -1,31 +1,25 @@
 # Vruttly
-INJECT SIMPLE
+`INJECT SIMPLE`
 
-### Clone this project
-```php
- pkg update && pkg upgrade
- pkg install git -y
- pkg install nodejs -y
- pkg install ffmpeg -y
- pkg install imagemagick -y
- git clone https://github.com/Nurutomo/wabot-aq
- cd wabot-aq
- npm install
-```
+### Clone this project``
+``pkg update && pkg upgrade``
+``pkg install git -y``
+``pkg install nodejs -y``
+``pkg install ffmpeg -y``
+``pkg install imagemagick -y``
+``git clone https://github.com/yahtoiba/Vruttly``
+``cd wabot-aq``
+``npm install``
+
 ###### Run
-```php
-> node . [<session name>] (session name is optional)
-```
+``node . [<session name>] (session name is optional)``
 
 ---------
 
 ### Or this
-```bash
-> git clone https://github.com/Nurutomo/wabot-aq
-> cd wabot-aq
-> npm install
-```
-###### Run
-```bash
-> node index.js
-```
+``git clone https://github.com/yahtoiba/wabotVruttly``
+``cd Vruttly``
+``npm install``
+
+###### Use
+``node index.js``
