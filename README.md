@@ -1,25 +1,25 @@
-# wabot-aq
-Simple WhatsApp Bot
+# Vruttly
+INJECT SIMPLE
 
-### FOR TERMUX USER
-```bash
-> pkg update && pkg upgrade
-> pkg install git -y
-> pkg install nodejs -y
-> pkg install ffmpeg -y
-> pkg install imagemagick -y
-> git clone https://github.com/Nurutomo/wabot-aq
-> cd wabot-aq
-> npm install
+### Clone this project
+```php
+ pkg update && pkg upgrade
+ pkg install git -y
+ pkg install nodejs -y
+ pkg install ffmpeg -y
+ pkg install imagemagick -y
+ git clone https://github.com/Nurutomo/wabot-aq
+ cd wabot-aq
+ npm install
 ```
 ###### Run
-```bash
+```php
 > node . [<session name>] (session name is optional)
 ```
 
 ---------
 
-### FOR WINDOWS/VPS/RDP USER
+### Or this
 ```bash
 > git clone https://github.com/Nurutomo/wabot-aq
 > cd wabot-aq
