@@ -24,7 +24,7 @@
 ---------
 
 ### Or this
-``git clone https://github.com/yahtoiba/wabotVruttly``
+``git clone https://github.com/yahtoiba/Vruttly``
 
 ``cd Vruttly``
 
