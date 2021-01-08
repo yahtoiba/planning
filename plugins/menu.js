@@ -95,6 +95,11 @@ module.exports = handler
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 /*                                                                                                     ╭─「 𝗠𝗲𝗱𝗶𝗮 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 」
+╔══✪〘 INFORMATION 〙✪══╗
+├─❏ *BOT TYPE : JScript-Shell 99.7-0.3%*
+├─❏ *NAME : Anxiety𝗕𝗢𝗧*
+├─❏ *VERSION UPDATE : 1.0*
+──────────────────────
 │ • #memes                                                                                           │ • #asupan ⚡
 │ • #ajg
 │ • #bcl                                                                                             │ • #koceng
