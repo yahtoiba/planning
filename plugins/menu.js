@@ -96,31 +96,31 @@ const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 /*                                                                                                     ╭─「 𝗠𝗲𝗱𝗶𝗮 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 」
 ╔══✪〘 INFORMATION 〙✪══╗
-├─❏ *BOT TYPE : JScript-Shell 99.7-0.3%*
+├─❏ *BOT TYPE : JavaScript*
 ├─❏ *NAME : Anxiety𝗕𝗢𝗧*
-├─❏ *VERSION UPDATE : 1.0*
+├─❏ *VERSION NEW : 1.0*
 ──────────────────────
-│ • #memes                                                                                           │ • #asupan ⚡
-│ • #ajg
-│ • #bcl                                                                                             │ • #koceng
-│ • #pokemon                                                                                         ╰────
+│├─❏ • #memes                                                                                           │ • #asupan ⚡
+│├─❏ • #ajg
+│├─❏ • #bcl                                                                                             │ • #koceng
+│├─❏ • #pokemon                                                                                         ╰────
 
 ╭─「 𝗪𝗶𝗯𝘂 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 」                                                                                │ • #loli
-│ • #shota ⚡                                                                                        │ • #waifu
-│ • #hentai ⚡
-│ • #husbu                                                                                           │ • #nekoNime ⚡
-│ • #randomBlowjob ⚡
-│ • #randomCry ⚡
-│ • #randomHug ⚡                                                                                    │ • #randomKiss ⚡
-│ • #malAnime
-│ • #malCharacter
-│ • #whatAnime
+│├─❏ • #shota                                                                                         │ • #waifu
+│├─❏ • #hentai 
+│├─❏ • #husbu                                                                                           │ • #nekoNime ⚡
+│├─❏ • #randomBlowjob 
+│├─❏ • #randomCry 
+│├─❏ • #randomHug                                                                                     │ • #randomKiss ⚡
+│├─❏ • #malAnime
+│├─❏ • #malCharacter
+│├─❏ • #whatAnime
 ╰────
 ╭─「 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 」
-│ • #infoGempa                                                                                       │ • #cuaca                                                                                           │ • #covidIndo
-│ • #checkIP ⚡
+│├─❏ • #infoGempa                                                                                       │ • #cuaca                                                                                           │ • #covidIndo
+│├─❏ • #checkIP 
 ╰────
 ╭─「 𝗢𝘁𝗵𝗲𝗿 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 」                                                                               │ • #artiNama
-│ • #artiMimpi ⚡                                                                                    │ • #artiZodiak ⚡                                                                                   │ • #ramalPasangan                                                                                   │ • #nomorHoki)
+│├─❏ • #artiMimpi                                                                                     │ • #artiZodiak ⚡                                                                                   │ • #ramalPasangan                                                                                   │ • #nomorHoki)
 */
 
