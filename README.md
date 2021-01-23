@@ -14,16 +14,19 @@
 <a href="https://github.com/yahtoiba"><img title="Author" src="https://img.shields.io/badge/DEV-PLANNING-red?style=for-the-badge&logo=github"></a>
 </p>
 
-</details>
-<summary>Donate?</summary
-
-* [ClickHere](https://bit.ly/ClickDiSinii)
+<div align="center">
+<details>
+ <summary>🍥Help me!</summary>
+ 
+ [ClickHere](https://bit.ly/ClickDiSinii)
+ 
 </details>
 
 ---
 ###### GetApiKey?
-- ApiBarBar on [this site](https://mhankbarbar.tech)
+* ApiBarBar on [this site](https://mhankbarbar.tech)
 ---
+
 ---------
 
 | Temporary artificial features and modification |
