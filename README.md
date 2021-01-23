@@ -25,7 +25,7 @@
 ---
 ###### GetApiKey?
 * ApiBarBar on [this site](https://mhankbarbar.tech)
----
+
 
 ---------
 
@@ -47,9 +47,11 @@
 [Click Here](https://play.google.com/store/apps/details?id=com.whatsapp.w4b) 
 
 ---------
+
 ```Ikuti Langkah²nya```
 
 ###### Termux Only
+
 ```bash
 > termux-setup-storage
 (after that tap on permission)
@@ -64,15 +66,20 @@
 ```bash
 > npm start
 ```
+
 > npm install
 ```
+
 --------
+
 
 ###### Info Update .10 ==> .11
 ```bash
 > npm i -g npm
 ```
+
 --------
+
 
 ###### Run
 ```bash
@@ -81,8 +88,10 @@
 
 ---------
 
+
 ###### End
 ```bash
 > node index.js
 ```
+
 ---------
