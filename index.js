@@ -41,16 +41,16 @@ const cd = 4.32e+7
 const crypto = require('crypto')
 const qrcode = require("qrcode-terminal")
 const axios = require('axios')
-const welkom = JSON.parse(fs.readFileSync('./database/package/welkom.json'))
-const nsfw = JSON.parse(fs.readFileSync('./database/package/nsfw.json'))
-const samih = JSON.parse(fs.readFileSync('./database/package/simi.json'))
-const user = JSON.parse(fs.readFileSync('./database/package/user.json'))
-const _leveling = JSON.parse(fs.readFileSync('./database/package/leveling.json'))
-const _level = JSON.parse(fs.readFileSync('./database/package/level.json'))
-const event = JSON.parse(fs.readFileSync('./database/package/event.json'))
-const _limit = JSON.parse(fs.readFileSync('./database/package/limit.json'))
-const uang = JSON.parse(fs.readFileSync('./database/package/uang.json'))
-const _registered = JSON.parse(fs.readFileSync('./database/package/registered.json'))
+const welkom = JSON.parse(fs.readFileSync('./database/package/options/welkom.json'))
+const nsfw = JSON.parse(fs.readFileSync('./database/package/options/nsfw.json'))
+const samih = JSON.parse(fs.readFileSync('./database/package/options/simi.json'))
+const user = JSON.parse(fs.readFileSync('./database/package/options/user.json'))
+const _leveling = JSON.parse(fs.readFileSync('./database/package/options/leveling.json'))
+const _level = JSON.parse(fs.readFileSync('./database/package/options/level.json'))
+const event = JSON.parse(fs.readFileSync('./database/package/options/event.json'))
+const _limit = JSON.parse(fs.readFileSync('./database/package/options/limit.json'))
+const uang = JSON.parse(fs.readFileSync('./database/package/options/uang.json'))
+const _registered = JSON.parse(fs.readFileSync('./database/package/options/registered.json'))
 const { help } = require('./src/help')
 const { logomaker } = require('./database/media/logomaker')
 const { 18+ } = require('./database/media/18+')
@@ -131,7 +131,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _level[position].xp += amount
-                fs.writeFileSync('./database/package/level.json', JSON.stringify(_level))
+                fs.writeFileSync('./database/package/options/level.json', JSON.stringify(_level))
             }
         }
 
@@ -144,14 +144,14 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _level[position].level += amount
-                fs.writeFileSync('./database/package/level.json', JSON.stringify(_level))
+                fs.writeFileSync('./database/package/options/level.json', JSON.stringify(_level))
             }
         }
 
         const addLevelingId = (userId) => {
             const obj = {jid: userId, xp: 1, level: 1}
             _level.push(obj)
-            fs.writeFileSync('./database/package/level.json', JSON.stringify(_level))
+            fs.writeFileSync('./database/package/options/level.json', JSON.stringify(_level))
         }
         const getLimit = (sender) => {
                 let position = false
@@ -172,7 +172,7 @@ const getLevelingXp = (userId) => {
         const addRegisteredUser = (userid, sender, age, time, serials) => {
             const obj = { id: userid, name: sender, age: age, time: time, serial: serials }
             _registered.push(obj)
-            fs.writeFileSync('./database/package/registered.json', JSON.stringify(_registered))
+            fs.writeFileSync('./database/package/options/registered.json', JSON.stringify(_registered))
         }
 
         const createSerial = (size) => {
@@ -192,7 +192,7 @@ const getLevelingXp = (userId) => {
         const addATM = (sender) => {
                 const obj = {id: sender, uang : 0}
             uang.push(obj)
-            fs.writeFileSync('./database/package/uang.json', JSON.stringify(uang))
+            fs.writeFileSync('./database/package/options/uang.json', JSON.stringify(uang))
         }
 
         const addKoinUser = (sender, amount) => {
@@ -204,7 +204,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 uang[position].uang += amount
-                fs.writeFileSync('./database/package/uang.json', JSON.stringify(uang))
+                fs.writeFileSync('./database/package/options/uang.json', JSON.stringify(uang))
             }
         }
 
@@ -229,7 +229,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _limit[position].limit -= amount
-                fs.writeFileSync('./database/package/limit.json', JSON.stringify(_limit))
+                fs.writeFileSync('./database/package/options/limit.json', JSON.stringify(_limit))
             }
         }
 
@@ -242,7 +242,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 uang[position].uang -= amount
-                fs.writeFileSync('./database/package/uang.json', JSON.stringify(uang))
+                fs.writeFileSync('./database/package/options/uang.json', JSON.stringify(uang))
             }
         }
 
@@ -255,7 +255,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _limit[position].limit += 1
-                fs.writeFileSync('./database/package/limit.json', JSON.stringify(_limit))
+                fs.writeFileSync('./database/package/options/limit.json', JSON.stringify(_limit))
             }
         }
 
