@@ -1,6 +1,6 @@
 const config = {
-        botName: 'BOT_NAME',
-        ownerName: 'OWNER_NAME',
+        botName: 'PlanningBot',
+        ownerName: 'Fadhli',
         youtube: 'YOUTUBE_LINK',
-        instagram: 'INSTAGRAM_LINK',
+        instagram: 'instagram.com/itspapoy',
 }
