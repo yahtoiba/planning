@@ -1,7 +1,7 @@
 {
-  "name": "termux-whatsapp-bot",
+  "name": "planning",
   "version": "0.0.2",
-  "description": "Only termux",
+  "description": "Recommended Termux",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -40,10 +40,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NazwaS/termux-whatsapp-bot.git"
+    "url": "git+https://github.com/yahtoiba/planning.git"
   },
   "bugs": {
-    "url": "https://github.com/NazwaS/termux-whatsapp-bot/issues"
+    "url": "https://github.com/yahtoiba/planning/issues"
   },
-  "homepage": "https://github.com/NazwaS/termux-whatsapp-bot#readme"
+  "homepage": "https://github.com/yahtoiba/planning#readme"
 }
