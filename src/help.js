@@ -6,12 +6,14 @@ const help = (prefix) => {
  ┠❥ ❏ Prefix: 「  ${prefix}  」
  ╰╼❥ ❏ Creator: Planning
 
+
 ┏ ❣「 *ABOUT* 」
 ┠❥ ❏ ${prefix}info
 ┠❥ ❏ ${prefix}blocklist
 ┠❥ ❏ ${prefix}chatlist
 ┠❥ ❏ ${prefix}ping
 ╰╼❥ ❏ ${prefix}bugreport
+
 
 ┏ ❣「 *MAKER* 」
 ┷┯
@@ -51,10 +53,12 @@ const help = (prefix) => {
   ┠❥ ❏ ${prefix}pubglogo
   ╰╼❥ ❏ ${prefix}quotemaker
 
+
 ┏ ❣「 *MEDIA* 」
 ┠❥ ❏ ${prefix}trendtwit
 ┠❥ ❏ ${prefix}randomkpop
 ╰╼❥ ❏ ${prefix}ytsearch
+
 
 ┏ ❣「 *EDUCATION* 」 
 ┠❥ ❏ ${prefix}wiki
@@ -64,11 +68,13 @@ const help = (prefix) => {
 ┠❥ ❏ ${prefix}quotes2
 ╰╼❥ ❏ ${prefix}artinama
 
+
 ┏ ❣「 *KERANG* 」
 ┠❥ ❏ ${prefix}apakah
 ┠❥ ❏ ${prefix}kapankah
 ┠❥ ❏ ${prefix}rate
 ╰╼❥ ❏ ${prefix}bisakah
+
 
 ┏ ❣「 *DOWNLOADER* 」
 ┠❥ ❏ ${prefix}pinterest
@@ -77,9 +83,11 @@ const help = (prefix) => {
 ┠❥ ❏ ${prefix}tiktok
 ╰╼❥ ❏ ${prefix}joox
 
+
 ┏ ❣「 *MEME* 」
 ┠❥ ❏ ${prefix}meme
 ╰╼❥ ❏ ${prefix}memeindo
+
 
 ┏ ❣「 *GROUP* 」
 ┷┯ 
@@ -105,20 +113,25 @@ const help = (prefix) => {
   ┠❥ ❏ ${prefix}simih
   ╰╼❥ ❏ ${prefix}ownergroup
 
+
 ┏ ❣「 *SOUND* 」
 ┠❥ ❏ ${prefix}play
 ╰╼❥ ❏ ${prefix}tts
+
 
 ┏ ❣「 *MUSIC* 」
 ┠❥ ❏ ${prefix}lirik
 ╰╼❥ ❏ ${prefix}chord
 
+
 ┏ ❣「 *ISLAM* 」  
 ╰╼❥ ❏ ${prefix}quran
+
 
 ┏ ❣「 *STALK* 」
 ┠❥ ❏ ${prefix}tiktokstalk
 ╰╼❥ ❏ ${prefix}igstalk
+
 
 ┏ ❣「 *WIBU* 」
 ┠❥ ❏ ${prefix}neonime
@@ -131,10 +144,12 @@ const help = (prefix) => {
 ┠❥ ❏ ${prefix}wait
 ╰╼❥ ❏ ${prefix}nekonime
 
+
 ┏ ❣「 *18+* 」
 ┠❥ ❏ ${prefix}randomhentai
 ┠❥ ❏ ${prefix}nsfwtrap
 ╰╼❥ ❏ ${prefix}nsfwneko
+
 
 ┏ ❣「 *FUN* 」
 ┠❥ ❏ ${prefix}alay
