@@ -52,13 +52,13 @@
 ###### Termux Only
 
 ```bash
-> termux-setup-storage
-(after that tap on permission)
-> apt install git -y
-> git clone https://github.com/yahtoiba/planning
-> cd planning
-> bash install.sh
+ > apt update - y && apt upgrade -y
+ > apt install git -y
+ > git clone https://github.com/yahtoiba/planning
+ > cd planning
+ > bash install.sh
 ```
+---------
 
 ###### Use
 
