@@ -1,12 +1,6 @@
 /*
-* Tambahin nama author lah
-* Author nya Radya, Farid, M.hadi.firmansya, and Nazwa
-* Tambahin ya zhayank
-* Jan numpang nama doank
-* Baca readme nya biar gk tanya tanya
-
-- What's New?
-* Change domain arugaz
+* Weyyy ngapain?
+* Cr bouss
 */
 
 const {
@@ -24,8 +18,6 @@ const {
     mentionedJid,
     processTime,
 } = require('@adiwajshing/baileys')
-
-/******BEGIN OF FILE INPUT******/
 const { color, bgcolor } = require('./lib/color')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
@@ -33,9 +25,6 @@ const { virtex } = require('./src/virtex')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
-/******END OF FILE INPUT******/
-
-/******BEGIN OF NPM PACKAGE INPUT******/
 const fs = require('fs')
 const moment = require('moment-timezone')
 const { exec } = require('child_process')
@@ -52,9 +41,6 @@ const cd = 4.32e+7
 const crypto = require('crypto')
 const qrcode = require("qrcode-terminal")
 const axios = require('axios')
-/******END OF NPM PACKAGE INPUT******/
-
-/******BEGIN OF JSON INPUT******/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
@@ -65,9 +51,6 @@ const event = JSON.parse(fs.readFileSync('./database/json/event.json'))
 const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
 const uang = JSON.parse(fs.readFileSync('./database/json/uang.json'))
 const _registered = JSON.parse(fs.readFileSync('./database/json/registered.json'))
-/******END OF JSON INPUT******/
-
-/******BEGIN OF MENU INPUT******/
 const { help } = require('./src/help')
 const { logomaker } = require('./database/menu/logomaker')
 const { 18+ } = require('./database/menu/18+')
@@ -90,23 +73,19 @@ const { stayonscreen } = require('./database/menu/stayonscreen')
 const { stickermaker } = require('./database/menu/stickermaker')
 const { tod } = require('./database/menu/tod')
 const { wibu } = require('./database/menu/wibu')
-/******END OF MENU INPUT******/
-
-/******LOAD OF VCARD INPUT******/
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + 'FN:Nazwa🖤\n' // full name
-            + 'ORG:Owner Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=12542123926:+1 (254) 212-3926\n' // WhatsApp ID + phone number
+            + 'FN:Fadhli\n' // full name
+            + 'ORG:@itspapoy;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=6287714745440:+62 877 1474-5440\n' // WhatsApp ID + phone number
             + 'END:VCARD'
-/******END OF VCARD INPUT******/
 
-prefix = '.'
+prefix = '+'
 blocked = []
 limitawal = '20'
 cr = '*BOT INI SUDAH TERVERIFIKASI*'
 
-/******BEGIN OF FUNCTIONS INPUT******/
+
 const getLevelingXp = (userId) => {
             let position = false
             Object.keys(_level).forEach((i) => {
@@ -152,7 +131,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _level[position].xp += amount
-                fs.writeFileSync('./database/json/level.json', JSON.stringify(_level))
+                fs.writeFileSync('./database/package/level.json', JSON.stringify(_level))
             }
         }
 
@@ -165,14 +144,14 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _level[position].level += amount
-                fs.writeFileSync('./database/json/level.json', JSON.stringify(_level))
+                fs.writeFileSync('./database/package/level.json', JSON.stringify(_level))
             }
         }
 
         const addLevelingId = (userId) => {
             const obj = {jid: userId, xp: 1, level: 1}
             _level.push(obj)
-            fs.writeFileSync('./database/json/level.json', JSON.stringify(_level))
+            fs.writeFileSync('./database/package/level.json', JSON.stringify(_level))
         }
         const getLimit = (sender) => {
                 let position = false
@@ -193,7 +172,7 @@ const getLevelingXp = (userId) => {
         const addRegisteredUser = (userid, sender, age, time, serials) => {
             const obj = { id: userid, name: sender, age: age, time: time, serial: serials }
             _registered.push(obj)
-            fs.writeFileSync('./database/json/registered.json', JSON.stringify(_registered))
+            fs.writeFileSync('./database/package/registered.json', JSON.stringify(_registered))
         }
 
         const createSerial = (size) => {
@@ -213,7 +192,7 @@ const getLevelingXp = (userId) => {
         const addATM = (sender) => {
                 const obj = {id: sender, uang : 0}
             uang.push(obj)
-            fs.writeFileSync('./database/json/uang.json', JSON.stringify(uang))
+            fs.writeFileSync('./database/package/uang.json', JSON.stringify(uang))
         }
 
         const addKoinUser = (sender, amount) => {
@@ -225,7 +204,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 uang[position].uang += amount
-                fs.writeFileSync('./database/json/uang.json', JSON.stringify(uang))
+                fs.writeFileSync('./database/package/uang.json', JSON.stringify(uang))
             }
         }
 
@@ -250,7 +229,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _limit[position].limit -= amount
-                fs.writeFileSync('./database/json/limit.json', JSON.stringify(_limit))
+                fs.writeFileSync('./database/package/limit.json', JSON.stringify(_limit))
             }
         }
 
@@ -263,7 +242,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 uang[position].uang -= amount
-                fs.writeFileSync('./database/json/uang.json', JSON.stringify(uang))
+                fs.writeFileSync('./database/package/uang.json', JSON.stringify(uang))
             }
         }
 
@@ -276,7 +255,7 @@ const getLevelingXp = (userId) => {
             })
             if (position !== false) {
                 _limit[position].limit += 1
-                fs.writeFileSync('./database/json/limit.json', JSON.stringify(_limit))
+                fs.writeFileSync('./database/package/limit.json', JSON.stringify(_limit))
             }
         }
 
@@ -297,18 +276,18 @@ async function starts() {
 	client.logger.level = 'warn'
 	console.log(banner.string)
 	client.on('qr', () => {
-		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr code above'))
+		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan qr code mu nak'))
 	})
 
-	fs.existsSync('./Nazwa.json') && client.loadAuthInfo('./Nazwa.json')
+	fs.existsSync('./planning.json') && client.loadAuthInfo('./planning.json')
 	client.on('connecting', () => {
-		start('2', 'Connecting...')
+		start('2', 'Sabarr...')
 	})
 	client.on('open', () => {
-		success('2', 'Connected')
+		success('2', 'Terhubung')
 	})
 	await client.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./planning.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
 
 	client.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
@@ -374,30 +353,30 @@ async function starts() {
                         const q = args.join(' ')
 
 			mess = {
-				wait: '⌛ Sedang di Prosess ⌛',
-				success: '✔️ Berhasil ✔️',
-                                levelon: '❬ ✔ ❭ *enable leveling*',
+				wait: '🚀 Sedang di Prosess 🚀',
+				success: '√ Berhasil √',
+                                levelon: '❬ √ ❭ *enable leveling*',
 				leveloff: ' ❬ X ❭  *disable leveling*',
 				levelnoton: '❬ X ❭ *leveling not aktif*',
-				levelnol: '*LEVEL KAKAK MASIH* 0 °-°',
+				levelnol: '*LEVEL KAMU MASIH* 0 °-°',
 				error: {
-					stick: '[❗] Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker ❌',
-					Iv: '❌ Link tidak valid ❌'
+					stick: '[!] Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker X',
+					Iv: 'X Link tydak valid X'
 				},
 				only: {
-					group: '[❗] Perintah ini hanya bisa di gunakan dalam group! ❌',
-					ownerG: '[❗] Perintah ini hanya bisa di gunakan oleh owner group! ❌',
-					ownerB: '[❗] Perintah ini hanya bisa di gunakan oleh owner bot! ❌',
-					admin: '[❗] Perintah ini hanya bisa di gunakan oleh admin group! ❌',
-					Badmin: '[❗] Perintah ini hanya bisa di gunakan ketika bot menjadi admin! ❌',
-                                        daftarB: `──「 DAFTAR 」──\nHalo kak !\nKamu belum Terdaftar didalam database, \n\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Ryz|17`,
+					group: '[!] Perintah ini hanya bisa di gunakan dalam group! ❌',
+					ownerG: '[!] Perintah ini hanya bisa di gunakan oleh owner group! ❌',
+					ownerB: '[!] Perintah ini hanya bisa di gunakan oleh owner bot! ❌',
+					admin: '[!] Perintah ini hanya bisa di gunakan oleh admin group! ❌',
+					Badmin: '[!] Perintah ini hanya bisa di gunakan ketika bot menjadi admin! ❌',
+                                        daftarB: `──「 PENDAFTARAN 」──\nHalo sis !\nKamu belum Terdaftar didalam database, \n\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar planning|17`,
 				}
 			}
     			const apakah = ['Ya','Tidak']
         		const bisakah = ['Bisa','Tidak Bisa']
 		        const kapankah = ['Hari Lagi','Minggu Lagi','Bulan Lagi','Tahun Lagi']
 			const botNumber = client.user.jid
-			const ownerNumber = ["12542123926@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["6287714745440@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -415,13 +394,11 @@ async function starts() {
 			const isOwner = ownerNumber.includes(sender)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-                        const NomerOwner = '12542123926@s.whatsapp.net'
+                        const NomerOwner = '6287714745440@s.whatsapp.net'
                         const isEventon = isGroup ? event.includes(from) : false
                         const isRegister = checkRegisteredUser(sender)
-                        pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify : undefined
-                        /******ApiKey Input******/
-                        const BarBarKey = 'YOUR_APIKEY'
-                        /******End of ApiKey Input******/
+                        pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify : undefined                        
+                        const BarBarKey = 'YOUR_APIKEY'                        
 
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
@@ -448,7 +425,7 @@ async function starts() {
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
                     addLevelingLevel(sender, 1)
-                    await reply(`*「 LEVEL UP 」*\n\n➸ *Name*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nCongrats!! 🎉🎉`)
+                    await reply(`*「 LEVEL UP 」*\n\n➸ *Name*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nCongratss Sayang!🎉🐊`)
                 }
             } catch (err) {
                 console.error(err)
@@ -460,7 +437,7 @@ async function starts() {
                     for (let lmt of _limit) {
                         if (lmt.id === sender) {
                             limitCounts = limitawal - lmt.limit
-                            if (limitCounts <= 0) return client..sendMessage(from,`Limit request anda sudah habis\n\n_Note : Limit akan direset setiap jam 21:00!_`, text,{ quoted: mek})
+                            if (limitCounts <= 0) return client..sendMessage(from,`Limit Kamu sudah habis\n\n_Note : Limit akan direset setiap jam 21:00!_`, text,{ quoted: mek})
                             client.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
                             found = true
                         }
@@ -468,7 +445,7 @@ async function starts() {
                     if (found === false) {
                         let obj = { id: sender, limit: 1 }
                         _limit.push(obj)
-                        fs.writeFileSync('./database/json/limit.json', JSON.stringify(_limit))
+                        fs.writeFileSync('./database/package/limit.json', JSON.stringify(_limit))
                         client.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
                     }
                                 }
@@ -493,7 +470,7 @@ async function starts() {
            if (position === false) {
                 const obj = { id: sender, limit: 1 }
                 _limit.push(obj)
-                fs.writeFileSync('./database/json/limit.json',JSON.stringify(_limit))
+                fs.writeFileSync('./database/package/limit.json',JSON.stringify(_limit))
            return false
        }
      }
@@ -522,7 +499,7 @@ async function starts() {
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
  
-       /******END OF FUNCTIONS INPUT******/
+       
 			switch(command) {
 				case 'help':
 				case 'menu':
@@ -532,7 +509,7 @@ async function starts() {
                                         hisil = fs.readFileSync('./src/makerimg.jpg')
                                         client.sendMessage(from, hisil, image, {quoted: mek, caption: makermenu(prefix), text})
                                         break*/
-case 'timer':
+                                case 'timer':
 				if (args[1]=="detik") {var timer = args[0]+"000"
 				} else if (args[1]=="menit") {var timer = args[0]+"0000"
 				} else if (args[1]=="jam") {var timer = args[0]+"00000"
@@ -541,16 +518,16 @@ case 'timer':
 				reply("Waktu habis")
 				}, timer)
 				break
-                case 'bahasa':
-		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
-                break
+               case 'bahasa':
+	       client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
+               break
                case 'virtex':
                client.sendMessage(from, virtex(prefix, sender), text, {quoted: mek})
                break
                case 'kodenegara':
                client.sendMessage(from, negara(prefix, sender), text, {quoted: mek})
                break
-				case 'demote':
+				        case 'demote':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -569,7 +546,7 @@ case 'timer':
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
-                                case 'randomhentai':
+                                        case 'randomhentai':
                                         gatauda = body.slice(6)
                                         if (!isUser) return reply(mess.only.daftarB)
                                         reply(mess.wait)
@@ -577,7 +554,7 @@ case 'timer':
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek})
                                         break
-                                case 'loli':
+                                        case 'loli':
                                         gatauda = body.slice(6)
                                         if (!isUser) return reply(mess.only.daftarB)
                                         reply(mess.wait)
@@ -585,7 +562,7 @@ case 'timer':
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek})
                                         break
-                  case 'promote':
+                                        case 'promote':
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
@@ -596,28 +573,28 @@ case 'timer':
 					if (mentioned.length > 1) {
 						teks = 'Perintah di terima, menambah jabatan sebagai admin :\n'
 						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
+						teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
-					} else {
+					        } else {
 						mentions(`Perintah di terima, menambah jabatan sebagai admin : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
-					}
-					break
-				  case 'wa.me':
-				  case 'wame':
-  client.updatePresence(from, Presence.composing) 
-      options = {
-          text: `「 *SELF WHATSAPP* 」\n\n_Request by_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nYour link WhatsApp : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*Or ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
-          contextInfo: { mentionedJid: [sender] }
+					        }
+					        break
+    case 'wa.me':
+    case 'wame':
+    client.updatePresence(from, Presence.composing) 
+    options = {
+    text: `「 *SELF WHATSAPP* 」\n\n_Request by_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nYour link WhatsApp : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*Or ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
+    contextInfo: { mentionedJid: [sender] }
     }
     client.sendMessage(from, options, text, { quoted: mek } )
 				break
 				if (data.error) return reply(data.error)
 				reply(data.result)
 				break
-			case 'quotes':
+			        case 'quotes':
 				client.updatePresence(from, Presence.composing) 
                                 if (!isUser) return reply(mess.only.daftarB)
 				data = await fetchJson(`http://mhankbarbars.herokuapp.com/api/randomquotes`)
@@ -635,12 +612,12 @@ case 'timer':
                 hasil = data.result.fml
                 reply(hasil)
                 break
-              case 'owner':
+                case 'owner':
                 case 'creator':
-                  client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-               client.sendMessage(from, 'Nih nomor ownerku kak, save ya kak nanti di save balik',MessageType.text, { quoted: mek} )
+                client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
+                client.sendMessage(from, 'Nih nomor ownerku kak, save ya kak nanti di save balik',MessageType.text, { quoted: mek} )
                 break
-	case 'hidetag':
+	        case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
                 if (!isGroup) return reply(mess.only.group)
@@ -650,16 +627,16 @@ case 'timer':
                 jids = [];
                 member.map( async adm => {
                 jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
-                 })
-                 options = {
-                 text: teks,
+                })
+                options = {
+                text: teks,
                 contextInfo: {mentionedJid: jids},
                 quoted: mek
                 }
-              await client.sendMessage(from, options, text)
-               break
-                                case 'tiktokstalk':
-					try {
+                await client.sendMessage(from, options, text)
+                break
+                                                case 'tiktokstalk':
+					        try {
 						if (args.length < 1) return client.sendMessage(from, 'Usernamenya mana kak? ', text, {quoted: mek})
                                                 if (!isUser) return reply(mess.only.daftarB)
 						let { user, stats } = await tiktod.getUserProfileInfo(args[0])
@@ -667,12 +644,12 @@ case 'timer':
 						teks = `*ID* : ${user.id}\n*Username* : ${user.uniqueId}\n*Nickname* : ${user.nickname}\n*Followers* : ${stats.followerCount}\n*Followings* : ${stats.followingCount}\n*Posts* : ${stats.videoCount}\n*Luv* : ${stats.heart}\n`
 						buffer = await getBuffer(user.avatarLarger)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: teks})
-					} catch (e) {
+					        } catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('username tidak valid')
-					}
-					break
-				case 'snowwrite':
+					        }
+					        break
+				        case 'snowwrite':
 					var gh = body.slice(11)
 					var gbl7 = gh.split("|")[0];
 					var gbl8 = gh.split("|")[1];
@@ -683,7 +660,7 @@ case 'timer':
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
-				case 'marvellogo':
+				        case 'marvellogo':
 					var gh = body.slice(12)
 					if (args.length < 1) return reply(`Kirim perintah ${prefix}marvellogo teks, contoh ${prefix}marvellogo Nazwa Canss`)
                                         if (!isUser) return reply(mess.only.daftarB)
@@ -693,16 +670,16 @@ case 'timer':
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
 
-				case 'artinama':
+		  case 'artinama':
                   client.updatePresence(from, Presence.composing) 
                   if (!isUser) return reply(mess.only.daftarB)
-                    data = await fetchJson(`https://arugaz.my.id/api/primbon/artinama?name=${body.slice(10)}`)
-                   reply(data.result)
-                   break
-		case 'infonomor':
-               client.updatePresence(from, Presence.composing) 
-                 if (!isUser) return reply(mess.only.daftarB)
-                 if (args.length < 1) return reply(`Masukan Nomor\nContoh : ${prefix}infonomor 0812345678`)
+                  data = await fetchJson(`https://arugaz.my.id/api/primbon/artinama?name=${body.slice(10)}`)
+                  reply(data.result)
+                  break
+	        case 'infonomor':
+                client.updatePresence(from, Presence.composing) 
+                if (!isUser) return reply(mess.only.daftarB)
+                if (args.length < 1) return reply(`Masukan Nomor\nContoh : ${prefix}infonomor 0812345678`)
                 data = await fetchJson(`https://docs-jojo.herokuapp.com/api/infonomor?no=${body.slice(11)}`)
                 if (data.error) return reply(data.error)
                 if (data.result) return reply(data.result)
@@ -723,21 +700,21 @@ case 'timer':
                    hasil = `Negara : ${data.result.country}\n\nActive : ${data.result.active}\ncasesPerOneMillion : ${data.result.casesPerOneMillion}\ncritical : ${data.result.critical}\ndeathsPerOneMillion : ${data.result.deathsPerOneMillion}\nrecovered : ${data.result.recovered}\ntestPerOneMillion : ${data.result.testPerOneMillion}\ntodayCases : ${data.result.todayCases}\ntodayDeath : ${data.result.todayDeath}\ntotalCases : ${data.result.totalCases}\ntotalTest : ${data.result.totalTest}`
                    reply(hasil)
                    break
-				case 'wiki':
+				        case 'wiki':
 					if (args.length < 1) return reply('masukan kata kunci')
 					tels = body.slice(6)	
                                         if (!isUser) return reply(mess.only.daftarB)				
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/wiki?q=${tels}&apikey=BotWeA`, {method: 'get'})
 					reply(anu.result)
 					break	
-				case 'wikien':
+				        case 'wikien':
 					if (args.length < 1) return reply('masukan kata kunci')
 					tels = body.slice(8)		
 			                if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://arugaz.my.id/api/edu/enwiki?query=${tels}`, {method: 'get'})
 					reply(anu.result)
 					break				
-				case 'ytmp3':
+				        case 'ytmp3':
 					if (args.length < 1) return reply('Urlnya mana um?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://mhankbarbar.tech/api/yta?url=${args[0]}&apiKey=${BarBarKey}`, {method: 'get'})
@@ -748,7 +725,7 @@ case 'timer':
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
 					break
-				case 'ytmp4':
+				        case 'ytmp4':
 					if (args.length < 1) return reply('Urlnya mana um?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
@@ -759,7 +736,7 @@ case 'timer':
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
 					break
-				case 'trendtwit':
+				        case 'trendtwit':
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
 					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/trendingtwitter`, {method: 'get'})
@@ -769,7 +746,7 @@ case 'timer':
 					}
 					reply(teks.trim())
 					break
-				case 'testime':
+				        case 'testime':
 					setTimeout( () => {
 					client.sendMessage(from, 'Waktu habis:v', text) // ur cods
 					}, 10000) // 1000 = 1s,
@@ -780,7 +757,7 @@ case 'timer':
 					client.sendMessage(from, '10 Detik lagi', text) // ur cods
 					}, 0) // 1000 = 1s,
 					break
-				case 'semoji':
+				        case 'semoji':
 					if (args.length < 1) return reply('emojinya mana um?')
                                         if (!isUser) return reply(mess.only.daftarB)
 					ranp = getRandom('.png')
@@ -789,15 +766,15 @@ case 'timer':
 					anu = await fetchJson(`https://mhankbarbars.tech/api/emoji2png?emoji=${teks}&apikey=${BarBarKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker)
-						fs.unlinkSync(rano)
+					fs.unlinkSync(ranp)
+					if (err) return reply(mess.error.stick)
+					buffer = fs.readFileSync(rano)
+					client.sendMessage(from, buffer, sticker)
+					fs.unlinkSync(rano)
 					})
 					break
-				case 'nulis':
-				case 'tulis':
+				        case 'nulis':
+				        case 'tulis':
 					if (args.length < 1) return reply('Yang mau di tulis apaan?')
 					teks = body.slice(7)
 					reply(mess.wait)
@@ -806,27 +783,27 @@ case 'timer':
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek, caption: mess.success})
 					break
-	case 'kbbi':
-            client.updatePresence(from, Presence.composing) 
+	        case 'kbbi':
+                client.updatePresence(from, Presence.composing) 
                 if (args.length < 1) return reply(`Masukan Pertanyaan\nContoh : ${prefix}kbbi asu`)
-	      tels = body.slice(6)
-              data = await fetchJson(`https://tobz-api.herokuapp.com/api/kbbi?kata=${tels}&apikey=BotWeA`)
-              if (data.error) return reply(data.error)
-              hasil = `${data.result}`
-              reply(hasil)
-              break
-				case 'joox':
-			tels = body.slice(6)
+	        tels = body.slice(6)
+                data = await fetchJson(`https://tobz-api.herokuapp.com/api/kbbi?kata=${tels}&apikey=BotWeA`)
+                if (data.error) return reply(data.error)
+                hasil = `${data.result}`
+                reply(hasil)
+                break
+	        case 'joox':
+	        tels = body.slice(6)
                 data = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${tels}&apikey=BotWeA`, {method: 'get'})
-               if (!isUser) return reply(mess.only.daftarB)
-               if (data.error) return reply(data.error)
-                 infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${data.result.judul}\nAlbum : ${data.result.album}\nDipublikasi : ${data.result.dipublikasi}`
+                if (!isUser) return reply(mess.only.daftarB)
+                if (data.error) return reply(data.error)
+                infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${data.result.judul}\nAlbum : ${data.result.album}\nDipublikasi : ${data.result.dipublikasi}`
                 buffer = await getBuffer(data.result.thumb)
                 lagu = await getBuffer(data.result.mp3)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${data.result.title}.mp3`, quoted: mek})
                 break
-				case 'blocklist':
+				        case 'blocklist':
 					teks = 'This is list of blocked number :\n'
 					for (let block of blocked) {
 						teks += `~> @${block.split('@')[0]}\n`
@@ -834,7 +811,7 @@ case 'timer':
 					teks += `Total : ${blocked.length}`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": blocked}})
 					break
-                   case 'chatlist':
+                                        case 'chatlist':
 					client.updatePresence(from, Presence.composing)  
 					teks = 'This is list of chat number :\n'
 					for (let all of totalchat) {
@@ -843,7 +820,7 @@ case 'timer':
 					teks += `Total : ${totalchat.length}`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": totalchat}})
 					break
-				case 'animecry':
+				        case 'animecry':
 					ranp = getRandom('.gif')
 					rano = getRandom('.webp')
 					anu = await fetchJson('https://tobz-api.herokuapp.com/api/cry&apikey=BotWeA', {method: 'get'})
