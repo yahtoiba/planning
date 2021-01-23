@@ -1,5 +1,7 @@
+</p align="center">
 | Planning | B O T | [v3.0](https://github.com/yahtoiba) |
 | :-: | :-: | :-: |
+</p>
 ---------
 
 <p align="center"> 
