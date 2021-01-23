@@ -24,7 +24,8 @@
 
 ---------
 ###### GetApiKey?
-ApiBarBar [Click here](https://mhankbarbar.tech)
+ ApiBarBar [Click here](https://mhankbarbar.tech)
+
 ---------
 
 | Temporary artificial features and modification |
