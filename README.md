@@ -22,11 +22,9 @@
  
 </details>
 
----
+---------
 ###### GetApiKey?
-* ApiBarBar on [this site](https://mhankbarbar.tech)
-
-
+ApiBarBar [Click here](https://mhankbarbar.tech)
 ---------
 
 | Temporary artificial features and modification |
