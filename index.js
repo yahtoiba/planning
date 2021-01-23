@@ -52,27 +52,27 @@ const _limit = JSON.parse(fs.readFileSync('./database/package/options/limit.json
 const uang = JSON.parse(fs.readFileSync('./database/package/options/uang.json'))
 const _registered = JSON.parse(fs.readFileSync('./database/package/options/registered.json'))
 const { help } = require('./src/help')
-const { logomaker } = require('./database/media/logomaker')
-const { 18+ } = require('./database/media/18+')
-const { downloader } = require('./database/media/downloader')
-const { education } = require('./database/media/education')
-const { fun } = require('./database/media/fun')
-const { group } = require('./database/media/group')
-const { imagemaker } = require('./database/media/imagemaker')
-const { information } = require('./database/media/information')
-const { islam } = require('./database/media/islam')
-const { kerang } = require('./database/media/kerang')
-const { meme } = require('./database/media/meme')
-const { music } = require('./database/media/music')
-const { other } = require('./database/media/other')
-const { owner } = require('./database/media/owner')
-const { search } = require('./database/media/search')
-const { sound } = require('./database/media/sound')
-const { stalk } = require('./database/media/stalk')
-const { stayonscreen } = require('./database/media/stayonscreen')
-const { stickermaker } = require('./database/media/stickermaker')
-const { tod } = require('./database/media/tod')
-const { wibu } = require('./database/media/wibu')
+const { logomaker } = require('./database/package/media/logomaker')
+const { 18+ } = require('./database/package/media/18+')
+const { downloader } = require('./database/package/media/downloader')
+const { education } = require('./database/package/media/education')
+const { fun } = require('./database/package/media/fun')
+const { group } = require('./database/package/media/group')
+const { imagemaker } = require('./database/package/media/imagemaker')
+const { information } = require('./database/package/media/information')
+const { islam } = require('./database/package/media/islam')
+const { kerang } = require('./database/package/media/kerang')
+const { meme } = require('./database/package/media/meme')
+const { music } = require('./database/package/media/music')
+const { other } = require('./database/package/media/other')
+const { owner } = require('./database/package/media/owner')
+const { search } = require('./database/package/media/search')
+const { sound } = require('./database/package/media/sound')
+const { stalk } = require('./database/package/media/stalk')
+const { stayonscreen } = require('./database/package/media/stayonscreen')
+const { stickermaker } = require('./database/package/media/stickermaker')
+const { tod } = require('./database/package/media/tod')
+const { wibu } = require('./database/package/media/wibu')
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:Fadhli\n' // full name
@@ -947,9 +947,9 @@ async function starts() {
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - 〙', members_id, true)
+					mentions('╔══✪〘 TAG|ALL 〙✪══\n╠➥'+teks+'╚═〘 Planning 〙', members_id, true)
 					break
-                case 'tagall2':
+                                case 'tagall2':
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -957,12 +957,12 @@ async function starts() {
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += `  Total : ${groupMembers.length}\n`
 					for (let mem of groupMembers) {
-						teks += `╠➥ ${mem.jid.split('@')[0]}\n`
+						teks += `╠◪ ${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - 〙', text, {quoted: mek})
+					client.sendMessage(from, '╔══◪〘 TAG|ALL 〙◪══\n╠◪'+teks+'╚═◪〘 Planning 〙', text, {quoted: mek})
 					break
-                case 'tagall3':
+                                case 'mentionall':
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -970,12 +970,12 @@ async function starts() {
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += `  Total : ${groupMembers.length}\n`
 					for (let mem of groupMembers) {
-						teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
+						teks += `╠❥ https://wa.me/${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙', text, {detectLinks: false, quoted: mek})
+					client.sendMessage(from, '╔══❣〘 MENSYEN|ALL 〙❣══\n╠❥'+teks+'╚═❥〘 Planning 〙', text, {detectLinks: false, quoted: mek})
 					break
-                        case 'tagall4':
+                                case 'otagall':
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -983,12 +983,12 @@ async function starts() {
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += `  Total : ${groupMembers.length}\n`
 					for (let mem of groupMembers) {
-						teks += `╠➥ ${mem.jid.split('@')[0]}@c.us\n`
+						teks += `╠🚀 ${mem.jid.split('@')[0]}@c.us\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙', text, {quoted: mek})
+					client.sendMessage(from, '╔══🚀〘 OTAG|ALL 〙🚀══\n╠🚀'+teks+'╚═〘 Planning 〙', text, {quoted: mek})
 					break
-                case 'tagall5':
+                                case 'otagall2':
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -996,10 +996,10 @@ async function starts() {
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += `  Total : ${groupMembers.length}\n`
 					for (let mem of groupMembers) {
-						teks += `╠➥ ${mem.jid.split('@')[0]}@s.whatsapp.net\n`
+						teks += `╠🐊 ${mem.jid.split('@')[0]}@s.whatsapp.net\n`
 						members_id.push(mem.jid)
 					}
-					reply('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙')
+					reply('╔══🐊〘 Mention All 〙🐊══\n╠🐊'+teks+'╚═〘 Planning 〙')
 					break
 				case 'send':
 					var pc = body.slice(6)
@@ -1449,13 +1449,13 @@ async function starts() {
                                   case 'daftar':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('kamu sudah terdaftar')
-					if (args.length < 1) return reply(`Parameter Salah\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Caliph|12`)
+					if (args.length < 1) return reply(`Parameter Salah\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Planning|12`)
 					var reg = body.slice(8)
 					var jeneng = reg.split("|")[0];
 					var umure = reg.split("|")[1];
 						user.push(sender)
-						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}help\`\`\`\n\`\`\`\nTotal Pengguna ${user.length}\`\`\``, text, {quoted: mek})
+						fs.writeFileSync('./database/package/options/user.json', JSON.stringify(user))
+						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: TM08WBJDWOPRSHJSWLQZWL\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}help\`\`\`\n\`\`\`\nTotal Pengguna ${user.length}\`\`\``, text, {quoted: mek})
 					break
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
@@ -1465,11 +1465,11 @@ async function starts() {
 					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('fitur sudah aktif')
 						welkom.push(from)
-						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
+						fs.writeFileSync('./database/package/options/welkom.json', JSON.stringify(welkom))
 						reply('❬ SUCCSESS ❭ mengaktifkan fitur welcome di group ini')
 					} else if (Number(args[0]) === 0) {
 						welkom.splice(from, disable)
-						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
+						fs.writeFileSync('./database/package/options/welkom.json', JSON.stringify(welkom))
 						reply('❬ SUCCSESS ❭ menonaktifkan fitur welcome di group ini')
 					} else {
 						reply('ketik 1 untuk mengaktifkan, 0 untuk menonaktifkan fitur')
@@ -1665,12 +1665,12 @@ async function starts() {
                 if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
                 sem = sender.replace('@s.whatsapp.net','')
                 resul = `◪ *LEVEL*\n  ├─ ❏ *Name* : ${sem}\n  ├─ ❏ *User XP* : ${userXp}\n  └─ ❏ *User Level* : ${userLevel}`
-               client.sendMessage(from, resul, text, { quoted: mek})
+                client.sendMessage(from, resul, text, { quoted: mek})
                 .catch(async (err) => {
-                        console.error(err)
-                        await reply(`Error!\n${err}`)
-                    })
-            break
+                console.error(err)
+                await reply(`Error!\n${err}`)
+                })
+                break
 				case 'fitnah':
 				if (args.length < 1) return reply(`Usage :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember|hai|hai juga`)
 				var gh = body.slice(7)
@@ -1685,18 +1685,18 @@ async function starts() {
                 if (!isGroupAdmins) return reply(mess.only.admin)
                 if (args.length < 1) return reply('Ketik 1 untuk mengaktifkan fitur')
                 if (args[0] === '1') {
-                    if (isLevelingOn) return reply('*fitur level sudah aktif sebelum nya*')
-                    _leveling.push(groupId)
-                    fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
-                     reply(mess.levelon)
+                if (isLevelingOn) return reply('*fitur level sudah aktif sebelum nya*')
+                _leveling.push(groupId)
+                fs.writeFileSync('./database/package/options/leveling.json', JSON.stringify(_leveling))
+                reply(mess.levelon)
                 } else if (args[0] === '0') {
-                    _leveling.splice(groupId, 1)
-                    fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
-                     reply(mess.leveloff)
+               _leveling.splice(groupId, 1)
+                fs.writeFileSync('./database/package/options/leveling.json', JSON.stringify(_leveling))
+                reply(mess.leveloff)
                 } else {
-                    reply(' *Ketik perintah 1 untuk mengaktifkan, 0 untuk menonaktifkan* \n *Contoh: ${prefix}leveling 1*')
+                reply(' *Ketik perintah 1 untuk mengaktifkan, 0 untuk menonaktifkan* \n *Contoh: ${prefix}leveling 1*')
                 }
-            break
+                break
                                 case 'infogempa':
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/infogempa?apikey=BotWeA`, {method: 'get'})
                                         if (!isUser) return reply(mess.only.daftarB)
