@@ -14,8 +14,8 @@
 <a href="https://github.com/yahtoiba"><img title="Author" src="https://img.shields.io/badge/DEV-PLANNING-red?style=for-the-badge&logo=github"></a>
 </p>
 
-<summary>Donate?</summary>
 
+<summary>Donate?</summary
 * [ClickHere](https://bit.ly/ClickDiSinii)
 </details>
 
