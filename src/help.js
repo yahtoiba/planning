@@ -1,10 +1,9 @@
 const help = (prefix) => {
-	return `
+	return `Last update 01:21 Min 24 Januari 2021
+
 ┏ ❣「 *PlanningBot* 」
-╿
-┷┯ ◪ *INFO*
- ┠❥ ❏ Prefix: 「  ${prefix}  」
- ╰╼❥ ❏ Creator: Planning
+┠❥ ❏ Prefix: 「  ${prefix}  」
+╰╼❥ ❏ Creator: Planning
 
 
 ┏ ❣「 *ABOUT* 」
@@ -16,42 +15,41 @@ const help = (prefix) => {
 
 
 ┏ ❣「 *MAKER* 」
-┷┯
-  ┠❥ ❏ ${prefix}sticker
-  ┠❥ ❏ ${prefix}stickergif
-  ┠❥ ❏ ${prefix}toimg
-  ┠❥ ❏ ${prefix}tomp3
-  ┠❥ ❏ ${prefix}bpink
-  ┠❥ ❏ ${prefix}marvellogo
-  ┠❥ ❏ ${prefix}snowwrite
-  ┠❥ ❏ ${prefix}3dtext
-  ┠❥ ❏ ${prefix}ninjalogo
-  ┠❥ ❏ ${prefix}water
-  ┠❥ ❏ ${prefix}firetext
-  ┠❥ ❏ ${prefix}logowolf
-  ┠❥ ❏ ${prefix}logowolf2
-  ┠❥ ❏ ${prefix}phlogo
-  ┠❥ ❏ ${prefix}glitch
-  ┠❥ ❏ ${prefix}neonlogo
-  ┠❥ ❏ ${prefix}neonlogo2
-  ┠❥ ❏ ${prefix}lionlogo
-  ┠❥ ❏ ${prefix}jokerlogo
-  ┠❥ ❏ ${prefix}shadow
-  ┠❥ ❏ ${prefix}burnpaper
-  ┠❥ ❏ ${prefix}coffee
-  ┠❥ ❏ ${prefix}lovepaper
-  ┠❥ ❏ ${prefix}woodblock
-  ┠❥ ❏ ${prefix}qowheart
-  ┠❥ ❏ ${prefix}mutgrass
-  ┠❥ ❏ ${prefix}undergocean
-  ┠❥ ❏ ${prefix}woodenboards
-  ┠❥ ❏ ${prefix}wolfmetal
-  ┠❥ ❏ ${prefix}metalictglow
-  ┠❥ ❏ ${prefix}8bit
-  ┠❥ ❏ ${prefix}ttp
-  ┠❥ ❏ ${prefix}herrypotter
-  ┠❥ ❏ ${prefix}pubglogo
-  ╰╼❥ ❏ ${prefix}quotemaker
+┠❥ ❏ ${prefix}sticker
+┠❥ ❏ ${prefix}stickergif
+┠❥ ❏ ${prefix}toimg
+┠❥ ❏ ${prefix}tomp3
+┠❥ ❏ ${prefix}bpink
+┠❥ ❏ ${prefix}marvellogo
+┠❥ ❏ ${prefix}snowwrite
+┠❥ ❏ ${prefix}3dtext
+┠❥ ❏ ${prefix}ninjalogo
+┠❥ ❏ ${prefix}wate 
+┠❥ ❏ ${prefix}firetext
+┠❥ ❏ ${prefix}logowolf
+┠❥ ❏ ${prefix}logowolf2
+┠❥ ❏ ${prefix}phlogo
+┠❥ ❏ ${prefix}glitch
+┠❥ ❏ ${prefix}neonlogo
+┠❥ ❏ ${prefix}neonlogo2
+┠❥ ❏ ${prefix}lionlogo
+┠❥ ❏ ${prefix}jokerlogo
+┠❥ ❏ ${prefix}shadow
+┠❥ ❏ ${prefix}burnpaper
+┠❥ ❏ ${prefix}coffee
+┠❥ ❏ ${prefix}lovepaper
+┠❥ ❏ ${prefix}woodblock
+┠❥ ❏ ${prefix}qowheart
+┠❥ ❏ ${prefix}mutgrass
+┠❥ ❏ ${prefix}undergocean
+┠❥ ❏ ${prefix}woodenboards
+┠❥ ❏ ${prefix}wolfmetal
+┠❥ ❏ ${prefix}metalictglow
+┠❥ ❏ ${prefix}8bit
+┠❥ ❏ ${prefix}ttp
+┠❥ ❏ ${prefix}herrypotter
+┠❥ ❏ ${prefix}pubglogo
+╰╼❥ ❏ ${prefix}quotemaker
 
 
 ┏ ❣「 *MEDIA* 」
@@ -90,28 +88,27 @@ const help = (prefix) => {
 
 
 ┏ ❣「 *GROUP* 」
-┷┯ 
-  ┠❥ ❏ ${prefix}opengc
-  ┠❥ ❏ ${prefix}closegc
-  ┠❥ ❏ ${prefix}promote
-  ┠❥ ❏ ${prefix}demote
-  ┠❥ ❏ ${prefix}tagall
-  ┠❥ ❏ ${prefix}tagall2
-  ┠❥ ❏ ${prefix}tagall3
-  ┠❥ ❏ ${prefix}tagall4
-  ┠❥ ❏ ${prefix}tagall5
-  ┠❥ ❏ ${prefix}add
-  ┠❥ ❏ ${prefix}kick
-  ┠❥ ❏ ${prefix}listadmins
-  ┠❥ ❏ ${prefix}linkgroup
-  ┠❥ ❏ ${prefix}leave
-  ┠❥ ❏ ${prefix}welcome
-  ┠❥ ❏ ${prefix}nsfw
-  ┠❥ ❏ ${prefix}leveling
-  ┠❥ ❏ ${prefix}level
-  ┠❥ ❏ ${prefix}delete
-  ┠❥ ❏ ${prefix}simih
-  ╰╼❥ ❏ ${prefix}ownergroup
+┠❥ ❏ ${prefix}opengc
+┠❥ ❏ ${prefix}closegc
+┠❥ ❏ ${prefix}promote
+┠❥ ❏ ${prefix}demote
+┠❥ ❏ ${prefix}tagall
+┠❥ ❏ ${prefix}tagall2
+┠❥ ❏ ${prefix}mentionall
+┠❥ ❏ ${prefix}otagall
+┠❥ ❏ ${prefix}otagall2
+┠❥ ❏ ${prefix}add
+┠❥ ❏ ${prefix}kick
+┠❥ ❏ ${prefix}listadmins
+┠❥ ❏ ${prefix}linkgroup
+┠❥ ❏ ${prefix}leave
+┠❥ ❏ ${prefix}welcome
+┠❥ ❏ ${prefix}nsfw
+┠❥ ❏ ${prefix}level
+┠❥ ❏ ${prefix}leveling
+┠❥ ❏ ${prefix}delete
+┠❥ ❏ ${prefix}simih
+╰╼❥ ❏ ${prefix}ownergroup
 
 
 ┏ ❣「 *SOUND* 」
@@ -184,16 +181,16 @@ const help = (prefix) => {
 
 
 ┏ ❣「 *OTHER* 」
-┷┯ 
-  ┠❥ ❏ ${prefix}send
-  ┠❥ ❏ ${prefix}wame
-  ┠❥ ❏ ${prefix}virtex
-  ┠❥ ❏ ${prefix}exe
-  ┠❥ ❏ ${prefix}qrcode
-  ┠❥ ❏ ${prefix}afk
-  ┠❥ ❏ ${prefix}timer
-  ┠❥ ❏ ${prefix}fml
-  ╰╼❥ ❏ ${prefix}fml2
+┠❥ ❏ ${prefix}send
+┠❥ ❏ ${prefix}wame
+┠❥ ❏ ${prefix}virtex
+┠❥ ❏ ${prefix}exe
+┠❥ ❏ ${prefix}qrcode
+┠❥ ❏ ${prefix}afk
+┠❥ ❏ ${prefix}timer
+┠❥ ❏ ${prefix}fml
+╰╼❥ ❏ ${prefix}fml2
+
 
 ◪╼❥ *COMING SOON*
 `
