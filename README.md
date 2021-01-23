@@ -65,13 +65,9 @@
 
 ```bash
 > npm start
-```
-
 > npm install
 ```
-
 --------
-
 
 ###### Info Update .10 ==> .11
 ```bash
